@@ -1,0 +1,10 @@
+feedback,label
+It is too cold,0
+Make it warmer,0
+I am freezing,0
+Temperature is too low,0
+It is too warm,1
+Make it colder,1
+I am sweating,1
+Temperature is too high,1
+the elephant is blue,2
