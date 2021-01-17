@@ -6,6 +6,8 @@ Classify natural language feedback to extract automatically processable actions 
 ## tl;dr: 
 In Deutsche Bahn trains,  you can [give feedback by scanning a qr-code](https://inside.bahn.de/qr-code-umfrage/), which is interpreted in real time. I fast-prototyped this functionality for using [sentence-embedding](https://github.com/UKPLab/sentence-transformers) developed in the UKPLab at TU Darmstadt. Currently I have a about 80% chance of classifying correctly, whether the user feedback wants to increase or decrease the temperature in the cabin. Next steps are to evaluate that and to plot some results. 
 
+Try out here: [https://jkapitzke.de/rtf](https://jkapitzke.de/rtf)
+
 This is a highly unofficial project.
 
 ## What it does: 
@@ -38,7 +40,7 @@ Data contains feedback sentences and class labels of user intention ( 0: warmer,
 - data/test_set_labeled_sentences.csv: collected feedback sentences test set with correct labels
 
 ## How do I run it (linux)
-Try out on a [google colab](https://colab.research.google.com/drive/15o5TomRotSp-8SFZXT8yxwJsZ1kqywXt?usp=sharing).
+Try out on [https://jkapitzke.de/rtf](https://jkapitzke.de/rtf) or play with it in [google colab](https://colab.research.google.com/drive/15o5TomRotSp-8SFZXT8yxwJsZ1kqywXt?usp=sharing).
 
 - Clone repository
 - pip install cython torch numpy pandas seaborn matplotlib sklearn sentence-transformers

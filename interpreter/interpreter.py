@@ -9,7 +9,7 @@ import sklearn
 from sentence_transformers import SentenceTransformer, util
 
 # Models: paraphrase-xlm-r-multilingual-v1, quora-distilbert-base
-model = SentenceTransformer('quora-distilbert-base')
+model = SentenceTransformer('paraphrase-xlm-r-multilingual-v1', device='cpu')
 
 classes = ['warmer', 'colder', 'neither']
 
@@ -64,6 +64,7 @@ def interpret_feedback(user_input=''):
         user_sentences = user_sentences.append(
             {'feedback': user_input, 'label': y_pred}, ignore_index=True)
         user_sentences.to_csv(PATHS['user_sentences'], index=False)
+    return classes[y_pred]
 
 def evaluation():
     df = pd.read_csv(PATHS['test_set_labeled_sentences'])
